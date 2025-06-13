@@ -24,26 +24,31 @@ class _InsertscreenState extends State<Insertscreen> {
           TextFieldWidget(controller: descriptioncontroller, hintText: 'Enter description',),
           isLoading?CircularProgressIndicator():
           FloatingActionButton(onPressed: ()async{
-            isLoading=true;
-            setState(() {
+            try
+               {
 
-            });
-            await FirebaseFirestore.instance.collection('Insert').add({
-              //key and value
-              'title':titlecontroller.text,
-              'description':descriptioncontroller.text,
-            },).then((onValue){
-              isLoading=false;
-              setState(() {
-
-              });
-              //success message/////////snackbar
-            }).onError((handleError,error){
-              print('Error--------------${handleError.toString()}');
-              isLoading=false;
-              setState(() {
-                
-              });
+               }
+               catch (error){}
+            // isLoading=true;
+            // setState(() {
+            //
+            // });
+            // await FirebaseFirestore.instance.collection('Insert').add({
+            //   //key and value
+            //   'title':titlecontroller.text,
+            //   'description':descriptioncontroller.text,
+            // },).then((onValue){
+            //   isLoading=false;
+            //   setState(() {
+            //
+            //   });
+            //   //success message/////////snackbar
+            // }).onError((handleError,error){
+            //   print('Error--------------${handleError.toString()}');
+            //   isLoading=false;
+            //   setState(() {
+            //
+            //   });
             });
           },backgroundColor: Colors.blue,)
         ],
