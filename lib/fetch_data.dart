@@ -10,16 +10,20 @@ class FetchData extends StatefulWidget {
 class _FetchDataState extends State<FetchData> {
   @override
   Widget build(BuildContext context) {
-    return StreamBuilder(stream: FirebaseFirestore.instance.collection('insert').snapshots(),
-
-        builder:(context,snapshots){
-      return ListView.builder(
-          itemCount: snapshots.data!.docs.length,
-          itemBuilder: (context,index){
-            return ListTile(
-              title: Text(snapshots.data!.docs[index]['title'].toString()),
-            );
-          });
-        } );
+    return 
+      Scaffold(
+        body: StreamBuilder(stream: FirebaseFirestore.instance.collection('insert').snapshots(),
+        
+          builder:(context,snapshots){
+        return ListView.builder(
+            itemCount: snapshots.data!.docs.length,
+            itemBuilder: (context,index){
+              return ListTile(
+                title: Text(snapshots.data!.docs[index]['title'].toString()),
+                subtitle: Text(snapshots.data!.docs[index]['description'].toString()),
+              );
+            });
+          } ),
+      );
   }
 }
