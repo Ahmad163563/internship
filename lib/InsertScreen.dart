@@ -41,6 +41,7 @@ class _InsertscreenState extends State<Insertscreen> {
     setState(() {
 
     });
+    Navigator.pop(context);
     }
     catch (error)
      {
