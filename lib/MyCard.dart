@@ -1,25 +1,28 @@
 import 'package:flutter/material.dart';
-class Mycard extends StatefulWidget {
+
+class Mycard extends StatelessWidget {
   const Mycard({super.key});
 
   @override
-  State<Mycard> createState() => _MycardState();
-}
-
-class _MycardState extends State<Mycard> {
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
-            backgroundColor: Colors.teal,
-      body:
-      Center(
+      backgroundColor: Colors.teal,
+      body: SafeArea(
         child: Column(
           children: [
-          SizedBox(height: 100,),
             CircleAvatar(
-              radius: 70,
-
-                child: Image.asset('lib/assets/click in lake.jpg',fit:BoxFit.cover,height: 80,width: 80,))
+              radius: 50.0,
+              backgroundImage: AssetImage('lib/assets/click in lake.jpg'),
+            ),
+            Text(
+              'Ahmad Yar',
+              style: TextStyle(
+                  fontSize: 40.0, color: Colors.white, fontFamily:'Pacifico'),
+            ),
+            Text(
+              'Flutter Developer',
+              style: TextStyle(fontSize: 20.0, color: Colors.teal[900],fontFamily: 'Poppins '),
+            )
           ],
         ),
       ),
