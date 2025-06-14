@@ -13,7 +13,7 @@ class Mycard extends StatelessWidget {
           children: [
             CircleAvatar(
               radius: 50.0,
-              backgroundImage: AssetImage('lib/assets/click in lake.jpg'),
+              backgroundImage: AssetImage('lib/assets/jin.jpg'),
             ),
             Text(
               'Ahmad Yar',
@@ -38,7 +38,7 @@ class Mycard extends StatelessWidget {
                 children: [
                   Icon(Icons.email,color: Colors.teal,),
                   SizedBox(width: 20.0,),
-                  Text('yar85224@gmail.com',style: TextStyle(fontSize: 20.0),)
+                  Text('FlutterPrac@gmail.com',style: TextStyle(fontSize: 20.0),)
                 ],
               ),
             ),
@@ -50,7 +50,7 @@ class Mycard extends StatelessWidget {
                 children: [
                   Icon(Icons.phone,color: Colors.teal,),
                   SizedBox(width: 20.0,),
-                  Text('03406311159',style: TextStyle(fontSize: 20.0),)
+                  Text('123-123-123',style: TextStyle(fontSize: 20.0),)
                 ],
               ),
             )
