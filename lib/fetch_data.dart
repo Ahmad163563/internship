@@ -16,7 +16,9 @@ class _FetchDataState extends State<FetchData> {
       return ListView.builder(
           itemCount: snapshots.data!.docs.length,
           itemBuilder: (context,index){
-            
+            return ListTile(
+              title: Text(snapshots.data!.docs[index]['title'].toString()),
+            );
           });
         } );
   }
