@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.light
       ),
       debugShowCheckedModeBanner: false,
-      home: Loadingclass()//Shimmerclass()//ListTileclass()//Mycard()//FetchData()//SplashScreen()//Insertscreen(),
+      home: Insertscreen()//Mycard()//Shimmerclass()//ListTileclass()Mycard()//FetchData()//SplashScreen()//Insertscreen(),
     );
   }
 }

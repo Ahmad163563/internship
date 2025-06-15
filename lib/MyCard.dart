@@ -54,8 +54,6 @@ class Mycard extends StatelessWidget {
                 ],
               ),
             ),
-                     TextButton(onPressed: (){}, child: Icon(Icons.saved_search_rounded))
-            
           ],
         ),
       ),
