@@ -8,7 +8,7 @@ class Expadedclass extends StatefulWidget {
 
 class _ExpadedclassState extends State<Expadedclass> {
   List<String> name=['january,february,march,april,may,june,july,august'];
-  List<String> countries=['india , usa , pak, china, turkey, bangladesh, azerbaijan, russia']
+  List<String> countries=['india , usa , pak, china, turkey, bangladesh, azerbaijan, russia'];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,12 +23,17 @@ class _ExpadedclassState extends State<Expadedclass> {
                   itemCount: name.length,
                   itemBuilder: (context,index){
                     return Card(
-                      child: ExpansionTile(title: Text(index.toString()),children: [
+                      child: ExpansionTile(title: Text(name[index].toString()),children: [
                         Container(
-                          
+                          height: 150,
+                            child: ListView.builder(
+                                itemCount: 150,
+                                itemBuilder: (context,index){
+                              return Text(countries[index].toString());
+                            }),
                         )
                       ],),
-                    )
+                    );
                   }))
           ],
         ),

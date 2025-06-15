@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebasedemo/InsertScreen.dart';
 import 'package:firebasedemo/MyCard.dart';
 import 'package:firebasedemo/fetch_data.dart';
+import 'package:firebasedemo/newclass.dart';
 import 'package:firebasedemo/practise_jsss.dart';
 import 'package:firebasedemo/smooth_indicator.dart';
 import 'package:firebasedemo/splashscreen.dart';
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Mycard()//FetchData()//SplashScreen()//Insertscreen(),
+      home: Expadedclass()//Mycard()//FetchData()//SplashScreen()//Insertscreen(),
     );
   }
 }
