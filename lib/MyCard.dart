@@ -53,7 +53,8 @@ class Mycard extends StatelessWidget {
                   Text('123-123-123',style: TextStyle(fontSize: 20.0),)
                 ],
               ),
-            )
+            ),
+            
           ],
         ),
       ),
