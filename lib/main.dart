@@ -5,6 +5,7 @@ import 'package:firebasedemo/fetch_data.dart';
 import 'package:firebasedemo/listtile_selection.dart';
 import 'package:firebasedemo/newclass.dart';
 import 'package:firebasedemo/practise_jsss.dart';
+import 'package:firebasedemo/shimmer_effecte.dart';
 import 'package:firebasedemo/smooth_indicator.dart';
 import 'package:firebasedemo/splashscreen.dart';
 
@@ -28,10 +29,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        brightness: Brightness.dark
+        brightness: Brightness.light
       ),
       debugShowCheckedModeBanner: false,
-      home: ListTileclass()//Mycard()//FetchData()//SplashScreen()//Insertscreen(),
+      home: Shimmerclass()//ListTileclass()//Mycard()//FetchData()//SplashScreen()//Insertscreen(),
     );
   }
 }
