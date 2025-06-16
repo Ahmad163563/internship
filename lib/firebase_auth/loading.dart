@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class Loading_auth extends StatelessWidget {
   Loading_auth({super.key});
-
+bool isLoading=false;
   TextEditingController emailController = TextEditingController();
 
   TextEditingController passwordController = TextEditingController();
@@ -33,11 +33,10 @@ class Loading_auth extends StatelessWidget {
                 keyboardType: TextInputType.emailAddress,
               ),
             ),
+            isLoading?CircularProgressIndicator(),
             TextButton(
                 onPressed: () async {
-                  await FirebaseAuth.instance.createUserWithEmailAndPassword(
-                      email: emailController.text.trim(),
-                      password: passwordController.text);
+                  
                 },
                 child: Text(
                   'signup',
