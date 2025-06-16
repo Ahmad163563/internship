@@ -4,7 +4,7 @@ import 'package:firebasedemo/MyCard.dart';
 import 'package:firebasedemo/fetch_data.dart';
 import 'package:firebasedemo/firebase_auth/loading.dart';
 import 'package:firebasedemo/listtile_selection.dart';
-import 'package:firebasedemo/loading.dart';
+
 import 'package:firebasedemo/newclass.dart';
 import 'package:firebasedemo/practise_jsss.dart';
 import 'package:firebasedemo/shimmer_effecte.dart';

@@ -40,6 +40,7 @@ dependencies:
   flutter_color: ^2.1.0
   smooth_page_indicator: ^1.1.0
   shimmer: ^2.0.0
+  firebase_auth: ^5.6.0
 
 
 dev_dependencies:
