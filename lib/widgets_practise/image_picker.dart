@@ -11,8 +11,11 @@ class Imageclass extends StatefulWidget {
 }
 
 class _ImageclassState extends State<Imageclass> {
-   File image;
+   File _image;
    final picker = ImagePicker();
+   Future getImage()async{
+     final pickerImage=picker. getImage(source: ImageSource.camera)
+   }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
