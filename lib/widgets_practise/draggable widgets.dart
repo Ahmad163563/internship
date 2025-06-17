@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 class DragableClass extends StatefulWidget {
@@ -8,6 +10,7 @@ class DragableClass extends StatefulWidget {
 }
 
 class _DragableClassState extends State<DragableClass> {
+  double left=0.0; double top=0.0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,12 +19,32 @@ class _DragableClassState extends State<DragableClass> {
       ),
       body: Stack(
         children: [
-          Container(
-            decoration: BoxDecoration(
-              color: Colors.red,
-              
-            ),
-          )
+          Positioned(
+            left: left,
+            top: top,
+
+            child:
+              GestureDetector(
+
+                onPanUpdate: (details){
+                  left=max(0,left+details.delta.dx);
+                  top=max(0,top+details.delta.dy);
+                  setState(() {
+
+                  });
+                },
+                onTap: (){},
+                child: Container(
+                  height: 100,
+                  width: 100,
+                  decoration: BoxDecoration(
+                    color: Colors.red,
+                    borderRadius: BorderRadius.circular(50)
+                  ),
+                ),
+              )
+
+          ),
         ],
       ),
     );
