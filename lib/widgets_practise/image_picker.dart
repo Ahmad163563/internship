@@ -1,4 +1,7 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 
 class Imageclass extends StatefulWidget {
   const Imageclass({super.key});
@@ -8,6 +11,8 @@ class Imageclass extends StatefulWidget {
 }
 
 class _ImageclassState extends State<Imageclass> {
+   File image;
+   final picker = ImagePicker();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
