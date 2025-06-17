@@ -13,7 +13,7 @@ class _ImageclassState extends State<Imageclass> {
   File? _image;
   final picker=ImagePicker();
   Future getImage()async{
-    final pickerImage=await picker.pickImage(source: ImageSource.gallery);
+    final pickerImage=await picker.pickImage(source: ImageSource.camera);
     setState(() {
       if(
         pickerImage!=null){
@@ -33,7 +33,7 @@ class _ImageclassState extends State<Imageclass> {
         title: Text('Flutter Image Picker'),
       ),
       body: Center(
-        
+        child: _image== null ?Text('No Image Selected'):Image.file(_image!),
 
       ),
       floatingActionButton: FloatingActionButton(onPressed: (){
