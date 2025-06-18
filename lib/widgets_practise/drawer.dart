@@ -13,8 +13,42 @@ class _DrawerclassState extends State<Drawerclass> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Drawer Navigation'),
+        backgroundColor: Colors.blue,
       ),
-      drawer: Drawer(),
+      drawer: Drawer(
+        child: ListView(
+          children: [
+            UserAccountsDrawerHeader(
+                accountName: Text('khan'), 
+                accountEmail: Text('123@gmail.com'),
+                currentAccountPicture: CircleAvatar(
+                  child: Text('1'),
+                ),              
+            ),
+            ListTile(
+              leading: Icon(Icons.share),
+              title: Text('Share',style: TextStyle(
+                fontSize: 18,
+                color: Colors.blue
+              ),),
+            ),
+            ListTile(
+              leading: Icon(Icons.rate_review),
+              title: Text('Rate Us',style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.redAccent
+              ),),
+            ),
+            ListTile(
+              leading: Icon(Icons.home),
+              title: Text('Home',style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.green
+              ),),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
