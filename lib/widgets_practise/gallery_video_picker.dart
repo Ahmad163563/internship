@@ -41,7 +41,10 @@ class _VideopickerState extends State<Videopicker> {
             child: VideoPlayer(_videoPlayerController),
             ):Container()
           else Text('select video'),
-               RaisedButton(onpressed:(){})
+               ElevatedButton(onPressed: (){
+                 _pickVideo();
+                 
+               }, child: Text('pick video from galler'))
                 
         ],
       ),
