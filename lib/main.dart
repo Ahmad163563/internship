@@ -9,6 +9,7 @@ import 'package:firebasedemo/practise_jsss.dart';
 import 'package:firebasedemo/shimmer_effecte.dart';
 import 'package:firebasedemo/smooth_indicator.dart';
 import 'package:firebasedemo/splashscreen.dart';
+import 'package:firebasedemo/widgets_practise/botton_navigation.dart';
 import 'package:firebasedemo/widgets_practise/draggable%20widgets.dart';
 import 'package:firebasedemo/widgets_practise/drawer.dart';
 import 'package:firebasedemo/widgets_practise/gallery_video_picker.dart';
@@ -37,7 +38,7 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.light
       ),
       debugShowCheckedModeBanner: false,
-      home: Videopicker()//Drawerclass()//Imageclass()//DragableClass()//Loading_auth()//Insertscreen()//Mycard()//Shimmerclass()//ListTileclass()Mycard()//FetchData()//SplashScreen()//Insertscreen(),
+      home: Bottomclass()//Videopicker()//Drawerclass()//Imageclass()//DragableClass()//Loading_auth()//Insertscreen()//Mycard()//Shimmerclass()//ListTileclass()Mycard()//FetchData()//SplashScreen()//Insertscreen(),
     );
   }
 }

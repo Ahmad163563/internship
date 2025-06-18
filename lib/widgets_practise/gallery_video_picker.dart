@@ -42,7 +42,7 @@ class _VideopickerState extends State<Videopicker> {
       ),
       body: Column(
         children: [
-          if (_video != null)
+          if (_videoPlayerController != null)
       _videoPlayerController != null &&
     _videoPlayerController!.value.isInitialized
     ? AspectRatio(
@@ -61,4 +61,4 @@ class _VideopickerState extends State<Videopicker> {
       ),
     );
   }
-}
+
