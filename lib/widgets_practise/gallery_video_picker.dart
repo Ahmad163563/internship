@@ -37,7 +37,11 @@ class _VideopickerState extends State<Videopicker> {
           if(_video !=null)
             _videoPlayerController.value.initialized ? AspectRatio(
 
-                aspectRatio: _videoPlayerController.value.initialized)
+                aspectRatio: _videoPlayerController.value.aspectRatio,
+            child: VideoPlayer(_videoPlayerController),
+            ):Container()
+          else Text('select video'),
+               RaisedButton(onpressed:(){})
                 
         ],
       ),
