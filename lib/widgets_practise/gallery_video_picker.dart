@@ -12,21 +12,29 @@ class Videopicker extends StatefulWidget {
 }
 
 class _VideopickerState extends State<Videopicker> {
-  VideoPlayerController _videoPlayerController;
-  File _video;
+  VideoPlayerController? _videoPlayerController;
+  File? _video;
   final picker= ImagePicker();
   _pickVideo()async{
     final video= await picker.pickVideo(source: ImageSource.gallery);
     _video = File(_pickVideo().path);
-    VideoPlayerController =_videoPlayerController.file(_video)..initialize().then((_){
-      setState(() {
+    _videoPlayerController = VideoPlayerController.file(_video!)
+      ..initialize().then((_) {
+        setState(() {});
+        _videoPlayerController!.play();
 
       });
-      _videoPlayerController.play();
-    });
-  }
+      _videoPlayerController!.play();
+    }
+
   @override
   Widget build(BuildContext context) {
+    // TODO: implement build
+    throw UnimplementedError();
+  }
+  }
+  @override
+  Widget build(BuildContext context, dynamic _videoPlayerController) {
     return Scaffold(
       appBar: AppBar(
         title: Text('video picker demo'),
@@ -34,17 +42,20 @@ class _VideopickerState extends State<Videopicker> {
       ),
       body: Column(
         children: [
-          if(_video !=null)
-            _videoPlayerController.value.initialized ? AspectRatio(
-
-                aspectRatio: _videoPlayerController.value.aspectRatio,
-            child: VideoPlayer(_videoPlayerController),
-            ):Container()
-          else Text('select video'),
-               ElevatedButton(onPressed: (){
-                 _pickVideo();
-                 
-               }, child: Text('pick video from galler'))
+          if (_video != null)
+      _videoPlayerController != null &&
+    _videoPlayerController!.value.isInitialized
+    ? AspectRatio(
+    aspectRatio: _videoPlayerController!.value.aspectRatio,
+      child: VideoPlayer(_videoPlayerController!),
+    )
+        : Container()
+    else
+    Text('Select video'),
+    ElevatedButton(
+    onPressed: () {
+    _VideopickerState();
+    }, child: Text('pick video from galler'))
                 
         ],
       ),
