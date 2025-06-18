@@ -9,7 +9,7 @@ class Bottomclass extends StatefulWidget {
 }
 
 class _BottomclassState extends State<Bottomclass> {
-  GlobalKey<State<StatefulWidget>> bottomNavigationKey= GlobalKey();
+  GlobalKey bottomNavigationKey= GlobalKey();
   int _selectedIndex=0;
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,15 @@ class _BottomclassState extends State<Bottomclass> {
         centerTitle: true,
         backgroundColor: Colors.blue,
       ),
-      bottomNavigationBar: CurvedNavigationBar(items: ),
+      bottomNavigationBar: CurvedNavigationBar(
+        key:
+        index: ,
+          height: ,
+
+          items:
+
+
+      ),
       body: ,
     );
   }
