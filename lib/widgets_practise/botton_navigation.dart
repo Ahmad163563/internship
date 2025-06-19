@@ -19,16 +19,6 @@ class _BottomclassState extends State<Bottomclass> {
         centerTitle: true,
         backgroundColor: Colors.blue,
       ),
-      bottomNavigationBar: CurvedNavigationBar(
-        key:
-        index: ,
-          height: ,
-
-          items:
-
-
-      ),
-      body: ,
     );
   }
 }

@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebasedemo/InsertScreen.dart';
 import 'package:firebasedemo/MyCard.dart';
+import 'package:firebasedemo/ai_proposal_writing/splashscreen.dart';
 import 'package:firebasedemo/fetch_data.dart';
 import 'package:firebasedemo/firebase_auth/loading.dart';
 import 'package:firebasedemo/listtile_selection.dart';
@@ -8,7 +9,6 @@ import 'package:firebasedemo/newclass.dart';
 import 'package:firebasedemo/practise_jsss.dart';
 import 'package:firebasedemo/shimmer_effecte.dart';
 import 'package:firebasedemo/smooth_indicator.dart';
-import 'package:firebasedemo/splashscreen.dart';
 import 'package:firebasedemo/widgets_practise/botton_navigation.dart';
 import 'package:firebasedemo/widgets_practise/draggable%20widgets.dart';
 import 'package:firebasedemo/widgets_practise/drawer.dart';
@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.light
       ),
       debugShowCheckedModeBanner: false,
-      home: Bottomclass()//Videopicker()//Drawerclass()//Imageclass()//DragableClass()//Loading_auth()//Insertscreen()//Mycard()//Shimmerclass()//ListTileclass()Mycard()//FetchData()//SplashScreen()//Insertscreen(),
+      home: Splashclass()//Bottomclass()//Videopicker()//Drawerclass()//Imageclass()//DragableClass()//Loading_auth()//Insertscreen()//Mycard()//Shimmerclass()//ListTileclass()Mycard()//FetchData()//SplashScreen()//Insertscreen(),
     );
   }
 }
