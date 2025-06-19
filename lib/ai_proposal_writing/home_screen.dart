@@ -1,4 +1,5 @@
 import 'package:firebasedemo/ai_proposal_writing/peoposal%20type.dart';
+import 'package:firebasedemo/ai_proposal_writing/settings/settings.dart';
 import 'package:flutter/material.dart';
 
 
@@ -21,10 +22,11 @@ class HomeScreenclass extends StatelessWidget {
         actions: const [
           Padding(
             padding: EdgeInsets.only(right: 16.0),
-            child: Icon(
-              Icons.settings,
-              color: Colors.grey,
-            ),
+            child:
+              IconButton(onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>Setting()))
+              }, icon: Icon(Icons.settings))
+
           ),
         ],
       ),
