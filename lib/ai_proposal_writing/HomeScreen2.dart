@@ -20,7 +20,7 @@ class HomeScreen2 extends StatelessWidget {
 
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(proposalName,style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold), ),
+            Text(proposalName,style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold,color: Colors.blue), ),
             SizedBox(height: 20,width: 35,),
             Column(
               children:[ Container(
@@ -68,7 +68,8 @@ class HomeScreen2 extends StatelessWidget {
                   color: Colors.deepPurple,
                   borderRadius: BorderRadius.circular(19)
                 ),
-                child: Center(
+                child:
+                Center(
                   child: Text('Continue',style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.w500,
