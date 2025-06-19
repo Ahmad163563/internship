@@ -13,7 +13,11 @@ class _SplashclassState extends State<Splashclass> {
     return Scaffold(
       backgroundColor: Colors.white,
       body:
-      Center(child: Image.asset('lib/assets/ai.png',)),
+      Center(
+        child: CircleAvatar(
+          backgroundImage: AssetImage('lib/assets/ai.png'),
+        ),
+      )
     );
   }
 }
