@@ -46,7 +46,7 @@ class _HomeScreen3State extends State<HomeScreen3> {
                 width: 400, // 👈 Width set ki
                 // 👈 Inner padding
                 decoration: BoxDecoration(
-                  color: Colors.grey[200],
+                  color: Colors.grey[300],
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Center(
@@ -71,7 +71,7 @@ class _HomeScreen3State extends State<HomeScreen3> {
                 width: 400, // 👈 Width set ki
                 // 👈 Inner padding
                 decoration: BoxDecoration(
-                  color: Colors.grey[200],
+                  color: Colors.grey[300],
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: TextField(
@@ -91,7 +91,7 @@ class _HomeScreen3State extends State<HomeScreen3> {
                 width: 400, // 👈 Width set ki
                 // 👈 Inner padding
                 decoration: BoxDecoration(
-                  color: Colors.grey[200],
+                  color: Colors.grey[300],
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: DropdownButtonHideUnderline(

@@ -28,7 +28,7 @@ class HomeScreen2 extends StatelessWidget {
                 width: 400,   // 👈 Width set ki
                  // 👈 Inner padding
                 decoration: BoxDecoration(
-                  color: Colors.grey[200],
+                  color: Colors.grey[300],
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: TextField(
@@ -47,7 +47,7 @@ class HomeScreen2 extends StatelessWidget {
               width: 400,   // 👈 Width set ki
               // 👈 Inner padding
               decoration: BoxDecoration(
-                color: Colors.grey[200],
+                color: Colors.grey[300],
                 borderRadius: BorderRadius.circular(10),
               ),
               child: TextField(

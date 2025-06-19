@@ -19,14 +19,19 @@ class HomeScreenclass extends StatelessWidget {
         ),
         backgroundColor: Colors.white,
         elevation: 0,
-        actions: const [
+        actions: [
           Padding(
             padding: EdgeInsets.only(right: 16.0),
             child:
-              IconButton(onPressed: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context)=>Setting()))
-              }, icon: Icon(Icons.settings))
-
+            IconButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Setting()),
+                );
+              },
+              icon: Icon(Icons.settings),
+            )
           ),
         ],
       ),
@@ -61,7 +66,7 @@ class HomeScreenclass extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 10),
-            const Text(
+             Text(
               'No Proposals Created',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
@@ -69,10 +74,14 @@ class HomeScreenclass extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 5),
-            const Text(
-              'Click here to create your first.',
-              style: TextStyle(fontSize: 16),
-            ),
+             TextButton(onPressed: (){
+               Navigator.push(context, MaterialPageRoute(builder: (context)=>Proposalclass()));
+             },
+               child: Text(
+                'Click here to create your first.',
+                style: TextStyle(fontSize: 16,color: Colors.black),
+                           ),
+             ),
           ],
         ),
       ),
