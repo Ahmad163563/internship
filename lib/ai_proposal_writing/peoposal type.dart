@@ -22,12 +22,20 @@ class Proposalclass extends StatelessWidget {
         title: Text('Step 1/3',style: TextStyle(color: Colors.black,fontWeight: FontWeight.w700,fontSize:30),),
       ),
       body:
-         Column(
-          children: [
-            
-            Padding(
-                padding: EdgeInsets.only(left: 10),
-                child: Text('Select Proposal Type',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 20),)),
+         Padding(
+             padding: const EdgeInsets.all(10.0), // Give overall padding
+             child: Column(
+               crossAxisAlignment: CrossAxisAlignment.start, // Align children to start
+               children: [
+               Text(
+               'Select Proposal Type',
+               style: TextStyle(
+                 color: Colors.black,
+                 fontWeight: FontWeight.bold,
+                 fontSize: 20,
+               ),
+             ),
+             SizedBox(height: 15,),
       Expanded(
         child: ListView.builder(
           itemCount: items.length,
@@ -37,7 +45,7 @@ class Proposalclass extends StatelessWidget {
               child: InkWell(
                 onTap: () {
                   // Jab item pe click ho to dusra screen open karo
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeScreen2()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeScreen2(proposalName: items[index], )));
                 },
                 child: Container(
                   height: 50,
@@ -60,7 +68,7 @@ class Proposalclass extends StatelessWidget {
       ),
           ],
         ),
-      );
+         ) );
     
   }
 }
