@@ -13,7 +13,7 @@ class _SplashclassState extends State<Splashclass> {
   void initState() {
     super.initState();
     // 3 second delay ke baad HomeScreen par navigate karo
-    Future.delayed(Duration(seconds: 1), () {
+    Future.delayed(Duration(seconds: 3), () {
       Navigator.push(context,
         MaterialPageRoute(builder: (context)=>HomeScreenclass()),
       );
