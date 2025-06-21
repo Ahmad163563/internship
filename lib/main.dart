@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(brightness: Brightness.light),
       debugShowCheckedModeBanner: false,
-      home: Loginclass()//Splashclass()//Bottomclass()//Videopicker()//Drawerclass()//Imageclass()//DragableClass()//Loading_auth()//Insertscreen()//Mycard()//Shimmerclass()//ListTileclass()Mycard()//FetchData()//SplashScreen()//Insertscreen(),
+      home: Splashclass()//Bottomclass()//Videopicker()//Drawerclass()//Imageclass()//DragableClass()//Loading_auth()//Insertscreen()//Mycard()//Shimmerclass()//ListTileclass()Mycard()//FetchData()//SplashScreen()//Insertscreen(),
     );
   }
 }

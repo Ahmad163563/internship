@@ -13,9 +13,16 @@ class _LoginclassState extends State<Loginclass> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        actions: [
+           InkWell(
+          onTap: (){},
+               child: CircleAvatar(child: Icon(Icons.close_rounded)))
+        ],
+      ),
       body: Column(
         children: [
-          SizedBox(height: 45,),
+          SizedBox(height: 30,),
           Center(
             child: Text('Login',style: TextStyle(
               color: Colors.orange,

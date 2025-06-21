@@ -1,3 +1,4 @@
+import 'package:firebasedemo/ai_proposal_writing/settings/login/login.dart';
 import 'package:flutter/material.dart';
 
 class Setting extends StatefulWidget {
@@ -25,22 +26,28 @@ backgroundColor: Colors.deepPurple,
               children: [
                 SizedBox(height: 40,width: 40,),
                 Center(
-                  child: Container(
-                    height: 60,
-                    width: 350,
-                    decoration: BoxDecoration(
-                     color: Colors.grey[300],
-                      borderRadius: BorderRadius.circular(20)
-                    ),
-                    child: Row(
-                      children: [
-                        SizedBox(width: 5,),
-                        Icon(Icons.person),
-                        SizedBox(width: 15,),
-                        Text('Login'),
-                        Spacer(),
-                        Icon(Icons.arrow_forward_ios_sharp)
-                      ],
+                  child:
+                  TextButton(
+                    onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>Loginclass()));
+                    },
+                    child: Container(
+                      height: 60,
+                      width: 350,
+                      decoration: BoxDecoration(
+                       color: Colors.grey[300],
+                        borderRadius: BorderRadius.circular(20)
+                      ),
+                      child: Row(
+                        children: [
+                          SizedBox(width: 5,),
+                          Icon(Icons.person),
+                          SizedBox(width: 15,),
+                          Text('Login'),
+                          Spacer(),
+                          Icon(Icons.arrow_forward_ios_sharp)
+                        ],
+                      ),
                     ),
                   ),
                 ),
