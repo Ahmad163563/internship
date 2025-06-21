@@ -9,6 +9,7 @@ class Loginclass extends StatefulWidget {
 }
 
 class _LoginclassState extends State<Loginclass> {
+  bool _obscurePassword = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,7 +47,12 @@ class _LoginclassState extends State<Loginclass> {
                       borderRadius: BorderRadius.circular(10),
                       color:Colors.grey
                     ),
-                    child: Text('Email',),
+                    child:
+                    TextField(
+                        decoration: InputDecoration(
+                          hintText: 'Email',
+                      border: InputBorder.none
+                        ),),
                   ),
                   SizedBox(height: 10,),
                   Container(
@@ -57,7 +63,26 @@ class _LoginclassState extends State<Loginclass> {
                         borderRadius: BorderRadius.circular(10),
                         color:Colors.grey
                     ),
-                    child: Text('Password'),
+                    child:
+                    TextField(
+                      obscureText: _obscurePassword, // 🔑 hide/show password
+                      decoration: InputDecoration(
+                        hintText: 'Password',
+                        border: InputBorder.none,
+                        suffixIcon: IconButton(
+                          icon: Icon(
+                            _obscurePassword
+                                ? Icons.visibility_off  // eye closed
+                                : Icons.visibility,     // eye open
+                          ),
+                          onPressed: () {
+                            setState(() {
+                              _obscurePassword = !_obscurePassword; // toggle state
+                            });
+                          },
+                        ),
+                      ),
+                  ),
                   ),
                   SizedBox(height: 20,),
                   Container(
