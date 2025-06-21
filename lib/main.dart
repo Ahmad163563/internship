@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebasedemo/InsertScreen.dart';
 import 'package:firebasedemo/MyCard.dart';
+import 'package:firebasedemo/ai_proposal_writing/settings/login/login.dart';
 import 'package:firebasedemo/ai_proposal_writing/splashscreen.dart';
 import 'package:firebasedemo/fetch_data.dart';
 import 'package:firebasedemo/firebase_auth/loading.dart';
@@ -35,7 +36,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(brightness: Brightness.light),
       debugShowCheckedModeBanner: false,
-      home: Splashclass()//Bottomclass()//Videopicker()//Drawerclass()//Imageclass()//DragableClass()//Loading_auth()//Insertscreen()//Mycard()//Shimmerclass()//ListTileclass()Mycard()//FetchData()//SplashScreen()//Insertscreen(),
+      home: Loginclass()//Splashclass()//Bottomclass()//Videopicker()//Drawerclass()//Imageclass()//DragableClass()//Loading_auth()//Insertscreen()//Mycard()//Shimmerclass()//ListTileclass()Mycard()//FetchData()//SplashScreen()//Insertscreen(),
     );
   }
 }
