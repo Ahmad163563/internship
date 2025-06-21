@@ -2,7 +2,6 @@ import 'package:firebasedemo/ai_proposal_writing/peoposal%20type.dart';
 import 'package:firebasedemo/ai_proposal_writing/settings/settings.dart';
 import 'package:flutter/material.dart';
 
-
 class HomeScreenclass extends StatelessWidget {
   const HomeScreenclass({super.key});
 
@@ -18,77 +17,80 @@ class HomeScreenclass extends StatelessWidget {
           ),
         ),
         backgroundColor: Colors.white,
-        elevation: 0,
         actions: [
           Padding(
-            padding: EdgeInsets.only(right: 16.0),
-            child:
-            IconButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Setting()),
-                );
-              },
-              icon: Icon(Icons.settings),
-            )
-          ),
+              padding: EdgeInsets.only(right: 16.0),
+              child: IconButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Setting()),
+                  );
+                },
+                icon: Icon(Icons.settings),
+              )),
         ],
       ),
       body: Padding(
-        padding: const EdgeInsets.all(20.0),
+        padding: EdgeInsets.all(20.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             ElevatedButton.icon(
               onPressed: () {
-               Navigator.push(context, MaterialPageRoute(builder: (context)=>Proposalclass()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Proposalclass()));
               },
-              icon: const Icon(Icons.auto_fix_high,color: Colors.white,),
-              label: const Text('Generate Proposal',style: TextStyle(
-                color: Colors.white
-              ),),
+              icon: Icon(
+                Icons.auto_fix_high,
+                color: Colors.white,
+              ),
+              label: Text(
+                'Generate Proposal',
+                style: TextStyle(color: Colors.white),
+              ),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.blue,
-                minimumSize: const Size.fromHeight(60),
-                textStyle: const TextStyle(fontSize: 18),
+                minimumSize: Size.fromHeight(60),
+                textStyle: TextStyle(fontSize: 18),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10),
                 ),
               ),
             ),
-            const SizedBox(height: 40),
-            const Text(
+            SizedBox(height: 40),
+            Text(
               'History',
               style: TextStyle(
                 fontSize: 26,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            const SizedBox(height: 10),
-             Text(
+            SizedBox(height: 10),
+            Text(
               'No Proposals Created',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 18,
               ),
             ),
-            const SizedBox(height: 5),
-             TextButton(onPressed: (){
-               Navigator.push(context, MaterialPageRoute(builder: (context)=>Proposalclass()));
-             },
-               child: Text(
+            SizedBox(height: 5),
+            TextButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Proposalclass()));
+              },
+              child: Text(
                 'Click here to create your first.',
-                style: TextStyle(fontSize: 16,color: Colors.black),
-                           ),
-             ),
+                style: TextStyle(fontSize: 16, color: Colors.black),
+              ),
+            ),
           ],
         ),
       ),
     );
   }
 }
-
 
 // import 'package:flutter/material.dart';
 //

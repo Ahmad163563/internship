@@ -23,7 +23,7 @@ class Proposalclass extends StatelessWidget {
       ),
       body:
          Padding(
-             padding: const EdgeInsets.all(10.0), // Give overall padding
+             padding: EdgeInsets.all(10.0), // Give overall padding
              child: Column(
                crossAxisAlignment: CrossAxisAlignment.start, // Align children to start
                children: [
