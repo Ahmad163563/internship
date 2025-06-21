@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Loginclass extends StatefulWidget {
@@ -13,7 +14,7 @@ class _LoginclassState extends State<Loginclass> {
     return Scaffold(
       body: Column(
         children: [
-          SizedBox(height: 55,),
+          SizedBox(height: 45,),
           Center(
             child: Text('Login',style: TextStyle(
               color: Colors.orange,
@@ -23,7 +24,7 @@ class _LoginclassState extends State<Loginclass> {
           ),
           Center(
             child: Container(
-              height: 400,
+              height: 430,
               width: 440,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(40),
@@ -36,22 +37,63 @@ class _LoginclassState extends State<Loginclass> {
                   Text('Fill out the information below in\n order to access your account',style: TextStyle(
                     color: Colors.black87,fontSize: 20
                   ),),
-                  SizedBox(height: 10,),
+                  SizedBox(height: 20,),
                   Container(
+                    padding: EdgeInsets.all(10),
                     height: 50,
                     width: 300,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                       color:Colors.grey
                     ),
-                    child: ConstrainedBox(
-                      constraints: BoxConstraints(
-                        minWidth: 100,
-                        minHeight: 50,
-                        maxWidth: 100,
-                        maxHeight: 50,
-                      ),child: Text('Email')),
+                    child: Text('Email',),
                   ),
+                  SizedBox(height: 10,),
+                  Container(
+                    padding: EdgeInsets.all(10),
+                    height: 50,
+                    width: 300,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color:Colors.grey
+                    ),
+                    child: Text('Password'),
+                  ),
+                  SizedBox(height: 20,),
+                  Container(
+                    height: 30,
+                    width: 250,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.deepPurple
+                    ),
+                    child: TextButton(onPressed: (){}, child: Center(
+                      child: Text('Sign In',style: TextStyle(color: Colors.white,fontWeight: FontWeight.w100),),
+                    )),
+                  ),
+                  SizedBox(height: 15,),
+                  InkWell(
+                    onTap: (){},
+                    child: Text('Forgot Password',style: TextStyle(
+                      color: CupertinoColors.systemBlue
+                    ),),
+                  ),
+                  SizedBox(height: 15,),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text('Dont have an account?',style: TextStyle(
+                        color: Colors.black87
+                      ),),
+                      SizedBox(width: 5,),
+                      InkWell(
+                        onTap: (){},
+                        child: Text('Sign up here',style: TextStyle(
+                          color: CupertinoColors.activeBlue,
+                        ),),
+                      )
+                    ],
+                  )
 
                 ],
               ),
