@@ -30,9 +30,10 @@ class _InsertscreenState extends State<Insertscreen> {
     setState(() {
 
     });
+    String docId=DateTime.now().microsecondsSinceEpoch.toString();
     await FirebaseFirestore.instance.collection('insert').add({
     'title': titlecontroller.text,
-    'description': descriptioncontroller.text
+    'description': descriptioncontroller.text,'docId':docId
     });
 
     isLoading=false;
@@ -41,7 +42,7 @@ class _InsertscreenState extends State<Insertscreen> {
     setState(() {
 
     });
-   // Navigator.pop(context);
+    Navigator.pop(context);
     }
     catch (error)
      {

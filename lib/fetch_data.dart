@@ -23,10 +23,14 @@ class _FetchDataState extends State<FetchData> {
                 itemCount: snapshots.data!.docs.length,
                 itemBuilder: (context, index) {
                   return ListTile(
+                    onTap: ()async{
+                      await FirebaseFirestore.instance.collection('insert').doc(snapshots.data!.docs[index]['docId'].toString()).delete();
+                    },
                     title:
                         Text(snapshots.data!.docs[index]['title'].toString()),
                     subtitle: Text(
                         snapshots.data!.docs[index]['description'].toString()),
+                    trailing: Text(snapshots.data!.docs[index]['docId'].toString()),
                   );
                 });
           }),
