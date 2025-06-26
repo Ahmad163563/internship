@@ -6,7 +6,7 @@ class Mycard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.redAccent,
+      backgroundColor: Colors.greenAccent,
       body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
